@@ -11,14 +11,10 @@ const HowItWorksPage = () => {
 
   return (
     <div className="how-it-works-page">
-      <div className="reveal">
-        <HowItWorksHero />
-      </div>
-      <div className="reveal">
-        <HowItWorksSteps />
-      </div>
-      <div className="reveal"><FAQ /></div>
-      <div className="reveal"><CTA /></div>
+      <HowItWorksHero />
+      <HowItWorksSteps />
+      <FAQ />
+      <CTA />
     </div>
   );
 };

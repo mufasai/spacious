@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import ContactHero from '../components/Contact/ContactHero';
 import ContactInfo from '../components/Contact/ContactInfo';
-import CTA from '../components/CTA/CTA';
+import FAQ from '../components/FAQ/FAQ';
+import CTA from '@/components/CTA/CTA';
 
 const ContactPage = () => {
   useEffect(() => {
@@ -10,15 +11,9 @@ const ContactPage = () => {
 
   return (
     <div className="contact-page">
-      <div className="reveal">
-        <ContactHero />
-      </div>
-      <div className="reveal">
-        <ContactInfo />
-      </div>
-      <div className="reveal">
-        <CTA />
-      </div>
+      <ContactHero />
+      <ContactInfo />
+      <CTA/>
     </div>
   );
 };

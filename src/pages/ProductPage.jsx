@@ -13,12 +13,10 @@ const ProductPage = () => {
 
   return (
     <div className="product-page">
-      <div className="reveal">
-        <ProductHero />
-      </div>
-      <div className="reveal"><Intelligence /></div>
-      <div className="reveal"><CustomerContext /></div>
-      <div className="reveal"><CTA /></div>
+      <ProductHero />
+      <Intelligence />
+      <CustomerContext />
+      <CTA />
     </div>
   );
 };

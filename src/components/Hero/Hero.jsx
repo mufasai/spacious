@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Hero.css';
-import { GridPattern } from "@/components/ui/grid-pattern";
+import { GridPattern } from "../ui/grid-pattern";
 
 
 const Hero = () => {
+  const navigate = useNavigate();
   const [scrollProgress, setScrollProgress] = useState(0);
   const [heroLine1, setHeroLine1] = useState('');
   const [heroLine2, setHeroLine2] = useState('');
@@ -63,7 +65,7 @@ const Hero = () => {
       <div className="hero-content">
         <div className="hero-badge">
           <span className="badge-icon">🧠</span>
-          <span className="badge-text">AI-POWERED CUSTOMER GROWTH</span>
+          <span className="font-white badge-text">AI-POWERED CUSTOMER GROWTH</span>
         </div>
 
         <h1 className="hero-heading">
@@ -79,8 +81,18 @@ const Hero = () => {
         </p>
 
         <div className="hero-actions">
-          <button className="hero-btn-primary">GET STARTED</button>
-          <button className="hero-btn-secondary">BOOK A DEMO</button>
+          <button 
+            className="hero-btn-primary"
+            onClick={() => navigate('/pricing')}
+          >
+            GET STARTED
+          </button>
+          <button 
+            className="hero-btn-secondary"
+            onClick={() => navigate('/contact')}
+          >
+            BOOK A DEMO
+          </button>
         </div>
       </div>
 

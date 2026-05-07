@@ -1,9 +1,11 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './AboutHero.css';
-import { GridPattern } from "@/components/ui/grid-pattern";
-import { Marquee } from "@/components/ui/marquee";
+import { GridPattern } from "../ui/grid-pattern";
+import { Marquee } from "../ui/marquee";
 
 const AboutHero = () => {
+  const navigate = useNavigate();
   const images = [
     "/about/image-1.png",
     "/about/image-2.png",
@@ -39,7 +41,12 @@ const AboutHero = () => {
 
         <div className="about-hero-actions">
           <button className="about-btn-primary">SEE MORE</button>
-          <button className="about-btn-secondary">BOOK A DEMO</button>
+          <button 
+            className="about-btn-secondary"
+            onClick={() => navigate('/contact')}
+          >
+            BOOK A DEMO
+          </button>
         </div>
       </div>
 

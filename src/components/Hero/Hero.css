@@ -124,7 +124,11 @@
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 1.5px;
-  color: rgba(255, 255, 255, 0.75);
+  color: #ffffff;
+}
+
+.font-white {
+  color: #ffffff !important;
 }
 
 .hero-heading {

@@ -59,12 +59,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  min-height: 500px;
 }
 
 .context-ui-image {
-  width: 100%;
+  position: absolute;
+  max-width: 100%;
   height: auto;
-  display: block;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.context-ui-image.active {
+  opacity: 1;
+  transform: translateY(0);
+  position: relative;
 }
 
 .context-list {
@@ -73,20 +84,9 @@
 }
 
 .context-item {
-  padding: 28px 0;
-  border-bottom: 1px solid #f3f4f6;
+  padding: 32px 0 0;
+  cursor: pointer;
   transition: all 0.3s ease;
-}
-
-.context-item:first-child {
-  padding-top: 0;
-}
-
-.context-item.active {
-  border-top: 1px solid #f3f4f6;
-  border-bottom: 2px solid #4C6FFF;
-  margin-top: -1px;
-  padding: 32px 0;
 }
 
 .context-item-header {
@@ -111,18 +111,46 @@
 
 .context-title {
   font-size: 22px;
-  font-weight: 600;
+  font-weight: 700;
   color: #111827;
   letter-spacing: -0.5px;
+  transition: color 0.3s ease;
+}
+
+.context-item.active .context-title {
+  color: #4C6FFF;
+}
+
+.context-accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+}
+
+.context-item.active .context-accordion-content {
+  max-height: 500px;
+  transition: max-height 1s ease-in-out;
 }
 
 .context-desc {
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.7;
   color: #6b7280;
-  margin-top: 16px;
-  padding-left: 68px;
-  max-width: 460px;
+  margin: 16px 0 0 68px;
+  max-width: 480px;
+}
+
+.context-divider {
+  width: 100%;
+  height: 1px;
+  background: #f3f4f6;
+  margin-top: 24px;
+  transition: background 0.3s ease, height 0.3s ease;
+}
+
+.context-item.active .context-divider {
+  background: #4C6FFF;
+  height: 2px;
 }
 
 .context-btn {
@@ -138,24 +166,12 @@
   letter-spacing: 0.5px;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 15px rgba(76, 111, 255, 0.2);
-}
-
-.context-btn:hover {
-  background: #3b5bdb;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(76, 111, 255, 0.3);
 }
 
 @media (max-width: 1024px) {
   .context-top-grid {
     grid-template-columns: 1fr;
     gap: 32px;
-    text-align: center;
-  }
-  
-  .context-top-subtext {
-    margin: 0 auto;
   }
   
   .context-main-grid {
@@ -163,15 +179,8 @@
     gap: 60px;
   }
   
-  .context-badge {
-    margin: 0 auto 24px;
-  }
-  
-  .context-btn {
-    margin: 48px auto 0;
-  }
-  
-  .context-visual {
+  .context-visual-container {
+    min-height: 400px;
     order: 2;
   }
   
@@ -184,9 +193,7 @@
   }
   
   .context-desc {
-    padding-left: 0;
+    margin-left: 0;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
   }
 }

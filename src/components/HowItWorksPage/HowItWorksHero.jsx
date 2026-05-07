@@ -1,8 +1,11 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './HowItWorksHero.css';
-import { GridPattern } from "@/components/ui/grid-pattern";
+import { GridPattern } from "../ui/grid-pattern";
 
 const HowItWorksHero = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="hiw-hero">
       <div className="hero-glow" />
@@ -31,7 +34,12 @@ const HowItWorksHero = () => {
 
         <div className="hiw-hero-actions">
           <button className="hiw-btn-primary">SEE THE PROCESS</button>
-          <button className="hiw-btn-secondary">BOOK A DEMO</button>
+          <button 
+            className="hiw-btn-secondary"
+            onClick={() => navigate('/contact')}
+          >
+            BOOK A DEMO
+          </button>
         </div>
       </div>
     </section>

@@ -10,13 +10,13 @@ import CTA from '../components/CTA/CTA';
 const HomePage = () => {
   return (
     <>
-      <div className="reveal"><Hero /></div>
-      <div className="reveal"><Features /></div>
-      <div className="reveal"><HowItWorks /></div>
-      <div className="reveal"><Pricing /></div>
-      <div className="reveal"><Testimonials /></div>
-      <div className="reveal"><FAQ /></div>
-      <div className="reveal"><CTA /></div>
+      <Hero />
+      <Features />
+      <HowItWorks />
+      <Pricing />
+      <Testimonials />
+      <FAQ />
+      <CTA />
     </>
   );
 };

@@ -10,15 +10,9 @@ const BlogPage = () => {
 
   return (
     <div className="blog-page">
-      <div className="reveal">
-        <BlogHero />
-      </div>
-      <div className="reveal">
-        <BlogList />
-      </div>
-      {/* <div className="reveal">
-        <CTA />
-      </div> */}
+      <BlogHero />
+      <BlogList />
+      <CTA />
     </div>
   );
 };

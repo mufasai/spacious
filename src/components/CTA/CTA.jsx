@@ -1,7 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './CTA.css';
 
 const CTA = () => {
+  const navigate = useNavigate();
+
+  const handleGetStarted = () => {
+    navigate('/pricing');
+  };
+
   return (
     <section className="cta-section">
       <div className="cta-container">
@@ -17,7 +24,7 @@ const CTA = () => {
           
           <h2 className="cta-title">
             Get your AI-Powered<br />
-            CRM Journey Today
+            CRM Today
           </h2>
           
           <p className="cta-subtitle">
@@ -31,7 +38,10 @@ const CTA = () => {
               placeholder="Enter your email here..." 
               className="cta-input"
             />
-            <button className="cta-submit-btn">
+            <button 
+              className="cta-submit-btn"
+              onClick={handleGetStarted}
+            >
               GET STARTED
             </button>
           </div>

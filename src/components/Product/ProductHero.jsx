@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './ProductHero.css';
-import { GridPattern } from "@/components/ui/grid-pattern";
+import { GridPattern } from "../ui/grid-pattern";
 
 const StatItem = ({ target, label, prefix = '', suffix = '' }) => {
   const [count, setCount] = useState(0);
@@ -55,6 +56,8 @@ const StatItem = ({ target, label, prefix = '', suffix = '' }) => {
 };
 
 const ProductHero = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="product-hero">
       <div className="product-hero-top">
@@ -84,8 +87,18 @@ const ProductHero = () => {
             </p>
 
             <div className="product-hero-actions">
-              <button className="product-btn-primary">GET STARTED</button>
-              <button className="product-btn-secondary">BOOK A DEMO</button>
+              <button 
+                className="product-btn-primary"
+                onClick={() => navigate('/pricing')}
+              >
+                GET STARTED
+              </button>
+              <button 
+                className="product-btn-secondary"
+                onClick={() => navigate('/contact')}
+              >
+                BOOK A DEMO
+              </button>
             </div>
           </div>
 

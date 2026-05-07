@@ -12,15 +12,11 @@ const AboutPage = () => {
 
   return (
     <div className="about-page">
-      <div className="reveal">
-        <AboutHero />
-      </div>
-      <div className="reveal">
-        <AboutMissionVision />
-      </div>
-      <div className="reveal"><AboutValues /></div>
-      <div className="reveal"><AboutTeam /></div>
-      <div className="reveal"><CTA /></div>
+      <AboutHero />
+      <AboutMissionVision />
+      <AboutValues />
+      <AboutTeam />
+      <CTA />
     </div>
   );
 };

@@ -102,8 +102,12 @@ const Navbar = () => {
           ))}
         </ul>
         <div className="navbar-actions">
-          <button className="btn-demo rounded-full">BOOK A DEMO</button>
-          <button className="btn-started rounded-full">GET STARTED</button>
+          <Link to="/contact">
+            <button className="btn-demo rounded-full">BOOK A DEMO</button>
+          </Link>
+          <Link to="/pricing">
+            <button className="btn-started rounded-full">GET STARTED</button>
+          </Link>
         </div>
       </div>
     </nav>

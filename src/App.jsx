@@ -12,32 +12,15 @@ import BlogDetailPage from './pages/BlogDetailPage';
 import ContactPage from './pages/ContactPage';
 import PrivacyPage from './pages/PrivacyPage';
 import TermsPage from './pages/TermsPage';
+import FAQPage from './pages/FAQPage';
 import './App.css';
 
 function App() {
   const location = useLocation();
 
   useEffect(() => {
-    // Small delay to ensure DOM is ready after route change
-    const timer = setTimeout(() => {
-      const revealElements = document.querySelectorAll('.reveal');
-      
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('active');
-          }
-        });
-      }, {
-        threshold: 0.1
-      });
-
-      revealElements.forEach(el => observer.observe(el));
-
-      return () => observer.disconnect();
-    }, 100);
-
-    return () => clearTimeout(timer);
+    // Scroll to top on route change
+    window.scrollTo(0, 0);
   }, [location]);
 
   return (
@@ -54,6 +37,7 @@ function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/privacy-policy" element={<PrivacyPage />} />
         <Route path="/terms-of-service" element={<TermsPage />} />
+        <Route path="/faq" element={<FAQPage />} />
       </Routes>
       <Footer />
     </div>

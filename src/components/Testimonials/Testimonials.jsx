@@ -27,6 +27,8 @@ const testimonialsData = [
     name: 'Kevin M.',
     role: 'Co-founder, Creative Studio',
     avatar: '/kevin.png',
+    role: 'Co-founder, Creative Studio',
+    avatar: '/kevin.png',
     icon: '/startup.png'
   }
 ];
