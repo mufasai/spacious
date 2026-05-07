@@ -1,0 +1,165 @@
+.pricing-comparison {
+  padding: 120px 24px;
+  background-color: #ffffff;
+}
+
+.comparison-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.comparison-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.comparison-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #f3f4f6;
+  padding: 6px 14px;
+  border-radius: 100px;
+  margin-bottom: 24px;
+}
+
+.comparison-badge .badge-text {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #374151;
+}
+
+.comparison-heading {
+  font-size: clamp(32px, 4vw, 56px);
+  font-weight: 600;
+  color: #111827;
+  letter-spacing: -2.5px;
+}
+
+.comparison-table-wrapper {
+  overflow-x: auto;
+  padding: 20px 0;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  text-align: center;
+}
+
+.comparison-table th, 
+.comparison-table td {
+  padding: 28px 20px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.feature-col {
+  text-align: left;
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  width: 30%;
+  border-bottom: none !important;
+}
+
+.plan-col {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111827;
+  width: 23.33%;
+  padding-bottom: 40px !important;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.plan-col.highlighted {
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+}
+
+.plan-name-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.most-popular-badge {
+  position: absolute;
+  top: -4px;
+  left: calc(100% + 12px);
+  background: #4C6FFF;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 8px;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(76, 111, 255, 0.2);
+}
+
+.highlighted {
+  background: #f1f4ff;
+}
+
+tbody tr td.highlighted {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+tbody tr:last-child td.highlighted {
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+  border-bottom: none;
+}
+
+.feature-name {
+  text-align: left;
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.plan-value {
+  font-size: 15px;
+  font-weight: 500;
+  color: #4b5563;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.check-icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .most-popular-badge {
+    position: static;
+    display: block;
+    margin-top: 8px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .comparison-table th, 
+  .comparison-table td {
+    padding: 20px 12px;
+  }
+  
+  .feature-col {
+    font-size: 16px;
+  }
+  
+  .plan-col {
+    font-size: 17px;
+  }
+  
+  .feature-name {
+    font-size: 14px;
+  }
+}

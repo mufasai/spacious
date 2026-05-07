@@ -1,0 +1,182 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 0 40px;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  background: rgba(8, 8, 12, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Floating State */
+.navbar.scrolled {
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: fit-content;
+  max-width: 90%;
+  height: 64px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 100px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  padding: 0 8px 0 24px;
+  height: 56px;
+}
+
+.navbar.scrolled .navbar-inner {
+  width: auto;
+  gap: 20px;
+  height: 100%;
+}
+
+.logo-icon-only {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.navbar-logo-text.scrolled {
+  color: #111827;
+  font-weight: 700;
+  font-size: 18px;
+  white-space: nowrap;
+}
+
+.navbar.scrolled .navbar-link {
+  color: #4b5563;
+  font-weight: 500;
+  white-space: nowrap;
+  padding: 6px 12px;
+}
+
+.navbar.scrolled .navbar-link:hover,
+.navbar.scrolled .navbar-link.active {
+  color: #111827;
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.navbar.scrolled .btn-demo {
+  display: none;
+}
+
+.navbar.scrolled .btn-started {
+  border-radius: 100px;
+  padding: 0 20px;
+  font-size: 11px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-inner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+/* Logo */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.navbar-logo-text {
+  font-family: 'Sora', 'Segoe UI', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: -0.3px;
+}
+
+/* Nav Links */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+  justify-content: center;
+}
+
+.navbar-link {
+  font-family: 'Sora', 'Segoe UI', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.65);
+  text-decoration: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  transition: color 0.2s ease, background 0.2s ease;
+  white-space: nowrap;
+}
+
+.navbar-link:hover,
+.navbar-link.active {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+/* Actions */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.btn-demo {
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 9px 20px;
+  font-family: 'Sora', 'Segoe UI', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.btn-demo:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.btn-started {
+  background: #4C6FFF;
+  color: #ffffff;
+  border: none;
+  padding: 9px 20px;
+  font-family: 'Sora', 'Segoe UI', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+  box-shadow: 0 0 20px rgba(76, 111, 255, 0.35);
+}
+
+.btn-started:hover {
+  background: #3F5CE0;
+  transform: translateY(-1px);
+  box-shadow: 0 0 28px rgba(76, 111, 255, 0.5);
+}

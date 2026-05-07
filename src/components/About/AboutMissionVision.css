@@ -1,0 +1,152 @@
+.about-mv {
+  padding: 120px 24px;
+  background-color: #ffffff;
+}
+
+.about-mv-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  padding-bottom: 100px;
+  border-bottom: 1px solid #f3f4f6;
+  margin-bottom: 120px;
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 64px;
+  font-weight: 600;
+  color: #4C6FFF;
+  margin-bottom: 16px;
+  letter-spacing: -2px;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.mv-block {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  margin-bottom: 160px;
+}
+
+.mv-block.vision {
+  margin-bottom: 0;
+}
+
+.mv-content {
+  flex: 1;
+}
+
+.mv-image {
+  flex: 1.1;
+}
+
+.mv-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.mv-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #f3f4f6;
+  padding: 6px 14px;
+  border-radius: 100px;
+  margin-bottom: 32px;
+}
+
+.mv-badge .badge-text {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #374151;
+}
+
+.mv-heading {
+  font-size: 48px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 24px;
+  letter-spacing: -1.5px;
+}
+
+.mv-text {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #6b7280;
+  margin-bottom: 40px;
+  max-width: 520px;
+}
+
+.mv-btn {
+  background: #4C6FFF;
+  color: #ffffff;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(76, 111, 255, 0.2);
+}
+
+.mv-btn:hover {
+  background: #3b5bdb;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(76, 111, 255, 0.3);
+}
+
+@media (max-width: 1024px) {
+  .mv-block {
+    flex-direction: column;
+    gap: 60px;
+    text-align: center;
+  }
+  
+  .mv-block.vision {
+    flex-direction: column-reverse;
+  }
+  
+  .mv-text {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .about-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+  }
+  
+  .stat-number {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-stats {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .mv-heading {
+    font-size: 36px;
+  }
+  
+  .about-mv {
+    padding: 80px 24px;
+  }
+}

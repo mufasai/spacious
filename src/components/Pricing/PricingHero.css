@@ -1,0 +1,84 @@
+.pricing-hero {
+  position: relative;
+  width: 100%;
+  min-height: 70vh;
+  background-color: #08080c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 160px 24px 100px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.hero-light-top-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60%;
+  max-width: 800px;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.6;
+  -webkit-mask-image: radial-gradient(circle at top right, black 30%, transparent 80%);
+  mask-image: radial-gradient(circle at top right, black 30%, transparent 80%);
+}
+
+.hero-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 1000px;
+  height: 600px;
+  background: radial-gradient(
+    circle at center,
+    rgba(76, 111, 255, 0.1) 0%,
+    rgba(76, 111, 255, 0.05) 40%,
+    transparent 70%
+  );
+  filter: blur(80px);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.pricing-hero-content {
+  position: relative;
+  z-index: 10;
+  max-width: 900px;
+}
+
+.pricing-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 6px 14px;
+  border-radius: 100px;
+  margin-bottom: 32px;
+}
+
+.pricing-hero-badge .badge-text {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.pricing-hero-heading {
+  font-size: clamp(40px, 6vw, 72px);
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.1;
+  margin-bottom: 32px;
+  letter-spacing: -2.5px;
+}
+
+.pricing-hero-subtext {
+  font-size: clamp(16px, 2vw, 19px);
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.5);
+}

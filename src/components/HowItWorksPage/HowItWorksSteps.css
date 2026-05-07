@@ -1,0 +1,128 @@
+.hiw-steps {
+  padding: 140px 24px;
+  background-color: #ffffff;
+}
+
+.hiw-steps-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hiw-step-block {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  margin-bottom: 160px;
+}
+
+.hiw-step-block:last-child {
+  margin-bottom: 0;
+}
+
+.hiw-step-block.image-left {
+  flex-direction: row-reverse;
+}
+
+.step-content {
+  flex: 1;
+}
+
+.step-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #f3f4f6;
+  padding: 6px 14px;
+  border-radius: 100px;
+  margin-bottom: 24px;
+}
+
+.step-badge .badge-text {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #374151;
+}
+
+.step-heading {
+  font-size: clamp(36px, 4.5vw, 56px);
+  font-weight: 600;
+  color: #111827;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  letter-spacing: -2.5px;
+}
+
+.step-subtext {
+  font-size: 17px;
+  line-height: 1.6;
+  color: #6b7280;
+  margin-bottom: 40px;
+  max-width: 480px;
+}
+
+.step-btn {
+  background: #4C6FFF;
+  color: #ffffff;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.step-btn:hover {
+  background: #3b5bdb;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(76, 111, 255, 0.2);
+}
+
+.step-visual {
+  flex: 1.2;
+}
+
+.step-visual-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .hiw-step-block {
+    flex-direction: column !important;
+    text-align: center;
+    gap: 60px;
+    margin-bottom: 120px;
+  }
+  
+  .hiw-step-block.image-left {
+    flex-direction: column !important;
+  }
+  
+  .step-subtext {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .step-visual-container {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 640px) {
+  .step-heading {
+    font-size: 32px;
+  }
+  
+  .hiw-steps {
+    padding: 80px 24px;
+  }
+}

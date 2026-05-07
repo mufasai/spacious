@@ -1,0 +1,245 @@
+.pricing {
+  padding: 120px 24px;
+  background-color: #ffffff;
+}
+
+.pricing-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pricing-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.pricing-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #f3f4f6;
+  padding: 6px 14px;
+  border-radius: 100px;
+  margin-bottom: 24px;
+}
+
+.pricing-badge-text {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #374151;
+}
+
+.pricing-heading {
+  font-size: clamp(32px, 4.5vw, 56px);
+  font-weight: 600;
+  color: #111827;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  letter-spacing: -2.5px;
+}
+
+.pricing-subtext {
+  font-size: 17px;
+  line-height: 1.6;
+  color: #6b7280;
+  margin-bottom: 48px;
+}
+
+.pricing-toggle-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.pricing-toggle {
+  background: #f9fafb;
+  padding: 4px;
+  border-radius: 100px;
+  display: flex;
+  border: 1px solid #f3f4f6;
+}
+
+.toggle-btn {
+  padding: 10px 32px;
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  background: transparent;
+  color: #6b7280;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.toggle-btn.active {
+  background: #ffffff;
+  color: #111827;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.pricing-cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.pricing-card {
+  background: #ffffff;
+  border: 1px solid #f3f4f6;
+  border-radius: 24px;
+  padding: 40px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  cursor: pointer;
+}
+
+.pricing-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.05);
+}
+
+.pricing-card.highlighted {
+  border: 2px solid #4C6FFF;
+  box-shadow: 0 30px 60px rgba(76, 111, 255, 0.1);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.custom-icon-wrapper {
+  flex-shrink: 0;
+}
+
+.icon-circle {
+  width: 48px;
+  height: 48px;
+  background: #4C6FFF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-square {
+  width: 18px;
+  height: 18px;
+  background: #ffffff;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-dot {
+  width: 4px;
+  height: 4px;
+  background: #4C6FFF;
+  border-radius: 50%;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.card-desc {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.card-price-wrap {
+  margin-bottom: 32px;
+}
+
+.card-price {
+  font-size: 48px;
+  font-weight: 600;
+  color: #111827;
+  letter-spacing: -1.5px;
+}
+
+.card-period {
+  font-size: 14px;
+  color: #6b7280;
+  margin-left: 8px;
+}
+
+.card-btn {
+  width: 100%;
+  padding: 14px 0;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: 32px;
+}
+
+.card-btn.primary {
+  background: #4C6FFF;
+  color: #ffffff;
+  border: none;
+}
+
+.card-btn.outline {
+  background: transparent;
+  color: #111827;
+  border: 1px solid #f3f4f6;
+}
+
+.card-divider {
+  height: 1px;
+  background: #f3f4f6;
+  margin-bottom: 32px;
+}
+
+.features-label {
+  font-size: 11px;
+  font-weight: 800;
+  color: #111827;
+  letter-spacing: 1px;
+  margin-bottom: 24px;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.features-list li {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  align-items: start;
+  gap: 12px;
+  font-size: 14px;
+  color: #4b5563;
+  margin-bottom: 16px;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.check-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 1024px) {
+  .pricing-cards-container {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
