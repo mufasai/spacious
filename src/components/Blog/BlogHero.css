@@ -60,6 +60,7 @@
   padding: 6px 14px;
   border-radius: 100px;
   margin-bottom: 32px;
+  animation: fadeInUp 0.8s ease-out forwards;
 }
 
 .blog-hero-badge .badge-text {
@@ -76,6 +77,8 @@
   line-height: 1.1;
   margin-bottom: 64px;
   letter-spacing: -2.5px;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out 0.2s forwards;
 }
 
 .featured-blog-card {
@@ -88,6 +91,19 @@
   gap: 40px;
   text-align: left;
   backdrop-filter: blur(20px);
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out 0.4s forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .featured-content {
@@ -205,4 +221,3 @@
     justify-content: center;
   }
 }
-
