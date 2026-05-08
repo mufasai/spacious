@@ -203,5 +203,37 @@
     grid-template-columns: 1fr;
     max-width: 500px;
     margin: 0 auto;
+    gap: 32px;
   }
 }
+
+@media (max-width: 768px) {
+  .pricing-cards-section {
+    padding: 80px 24px 100px;
+  }
+
+  .pricing-toggle-wrapper {
+    margin-bottom: 40px;
+  }
+
+  .pricing-card {
+    padding: 32px 24px;
+    border-radius: 20px;
+  }
+
+  .card-price {
+    font-size: 40px;
+  }
+
+  .card-header {
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .toggle-btn {
+    padding: 8px 20px;
+    font-size: 13px;
+  }
+}
+

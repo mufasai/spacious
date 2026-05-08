@@ -82,3 +82,26 @@
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.5);
 }
+@media (max-width: 768px) {
+  .pricing-hero {
+    padding-top: 120px;
+    padding-bottom: 60px;
+    min-height: auto;
+  }
+
+  .pricing-hero-heading {
+    font-size: 36px;
+    letter-spacing: -1.5px;
+    margin-bottom: 24px;
+  }
+
+  .pricing-hero-subtext {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pricing-hero-heading {
+    font-size: 32px;
+  }
+}

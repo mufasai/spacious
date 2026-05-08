@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './AboutMissionVision.css';
 
 const StatItem = ({ target, label, prefix = '', suffix = '' }) => {
@@ -54,6 +55,8 @@ const StatItem = ({ target, label, prefix = '', suffix = '' }) => {
 };
 
 const AboutMissionVision = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="about-mv">
       <div className="about-mv-inner">
@@ -76,7 +79,12 @@ const AboutMissionVision = () => {
               To help teams understand customers deeply and act with clarity—by turning 
               everyday interactions into meaningful insights through practical, human-centered AI.
             </p>
-            <button className="mv-btn">GET STARTED</button>
+            <button 
+              className="mv-btn"
+              onClick={() => navigate('/pricing')}
+            >
+              GET STARTED
+            </button>
           </div>
           <div className="mv-image">
             <img src="/about/mission.png" alt="Our Mission" />
@@ -98,12 +106,18 @@ const AboutMissionVision = () => {
               complexity—where technology quietly supports teams in building trust, 
               relevance, and lasting growth.
             </p>
-            <button className="mv-btn">GET STARTED</button>
+            <button 
+              className="mv-btn"
+              onClick={() => navigate('/pricing')}
+            >
+              GET STARTED
+            </button>
           </div>
         </div>
       </div>
     </section>
   );
 };
+
 
 export default AboutMissionVision;

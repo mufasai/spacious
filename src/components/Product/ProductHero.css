@@ -196,32 +196,87 @@
 }
 
 @media (max-width: 1024px) {
+  .product-hero-top {
+    padding-top: 100px;
+    min-height: auto;
+  }
+
   .product-hero-container {
     grid-template-columns: 1fr;
     text-align: center;
-    gap: 80px;
+    gap: 48px;
   }
   
   .product-hero-content {
     margin: 0 auto;
+    padding-bottom: 40px;
   }
   
   .product-hero-actions {
     justify-content: center;
   }
+
+  .product-hero-image {
+    position: relative;
+    width: 100%;
+    right: 0;
+    bottom: 0;
+    margin-top: 40px;
+  }
+
+  .product-mockup {
+    border-radius: 20px 20px 0 0;
+  }
   
   .product-stats-inner {
     grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-hero-heading {
+    font-size: 32px;
+    letter-spacing: -1px;
+  }
+
+  .product-hero-subtext {
+    font-size: 16px;
+  }
+
+  .product-hero-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .product-btn-primary,
+  .product-btn-secondary {
+    width: 100%;
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .product-stats-bar {
+    padding: 40px 24px;
   }
 }
 
 @media (max-width: 640px) {
   .product-stats-inner {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 32px;
   }
   
   .product-stat-number {
-    font-size: 48px;
+    font-size: 40px;
   }
 }
+
+@media (max-width: 480px) {
+  .product-hero-heading {
+    font-size: 28px;
+  }
+}
+

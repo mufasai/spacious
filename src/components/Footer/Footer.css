@@ -90,9 +90,14 @@
 }
 
 @media (max-width: 1024px) {
+  .footer {
+    padding: 80px 0 60px;
+  }
+
   .footer-inner {
     flex-direction: column;
     gap: 60px;
+    padding: 0 24px;
   }
   
   .footer-right {
@@ -103,10 +108,10 @@
 }
 
 @media (max-width: 640px) {
-  .footer-inner {
-    padding: 0 24px;
+  .footer-logo {
+    margin-bottom: 32px;
   }
-  
+
   .footer-right {
     grid-template-columns: 1fr;
     gap: 40px;
@@ -114,5 +119,21 @@
   
   .footer-heading {
     font-size: 28px;
+    letter-spacing: -1px;
+  }
+
+  .footer-column h4 {
+    margin-bottom: 20px;
+  }
+
+  .footer-column ul {
+    gap: 16px;
   }
 }
+
+@media (max-width: 480px) {
+  .footer-heading {
+    font-size: 24px;
+  }
+}
+

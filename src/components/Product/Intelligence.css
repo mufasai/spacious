@@ -177,11 +177,20 @@
 }
 
 @media (max-width: 1024px) {
+  .intelligence {
+    padding: 80px 24px;
+  }
+
   .intelligence-header {
     grid-template-columns: 1fr;
     gap: 32px;
+    text-align: center;
   }
   
+  .intelligence-subtext {
+    margin: 0 auto;
+  }
+
   .intelligence-grid {
     grid-template-columns: 1fr;
     gap: 60px;
@@ -194,9 +203,50 @@
   .intelligence-desc {
     margin-left: 0;
     text-align: center;
+    max-width: 100%;
   }
   
   .intelligence-item-header {
     justify-content: center;
   }
+
+  .intelligence-badge {
+    justify-content: center;
+  }
+
+  .intelligence-btn {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
 }
+
+@media (max-width: 768px) {
+  .intelligence-heading {
+    font-size: 32px;
+    letter-spacing: -1px;
+  }
+
+  .intelligence-title {
+    font-size: 18px;
+  }
+
+  .intelligence-desc {
+    font-size: 15px;
+  }
+
+  .intelligence-visual {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .intelligence-heading {
+    font-size: 28px;
+  }
+
+  .intelligence-btn {
+    width: 100%;
+  }
+}
+

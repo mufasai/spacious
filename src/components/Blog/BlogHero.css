@@ -166,8 +166,43 @@
 }
 
 @media (max-width: 900px) {
+  .blog-hero {
+    padding-top: 120px;
+    min-height: auto;
+  }
+
+  .blog-hero-heading {
+    font-size: 32px;
+    letter-spacing: -1px;
+    margin-bottom: 40px;
+  }
+
   .featured-blog-card {
     grid-template-columns: 1fr;
     padding: 24px;
+    gap: 32px;
+    border-radius: 24px;
+  }
+
+  .featured-title {
+    font-size: 24px;
+  }
+
+  .featured-desc {
+    font-size: 15px;
+    margin-bottom: 32px;
   }
 }
+
+@media (max-width: 480px) {
+  .blog-hero-heading {
+    font-size: 28px;
+  }
+
+  .read-more-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+

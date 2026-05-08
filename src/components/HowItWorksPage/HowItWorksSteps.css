@@ -96,11 +96,15 @@
 }
 
 @media (max-width: 1024px) {
+  .hiw-steps {
+    padding: 80px 24px;
+  }
+
   .hiw-step-block {
     flex-direction: column !important;
     text-align: center;
     gap: 60px;
-    margin-bottom: 120px;
+    margin-bottom: 100px;
   }
   
   .hiw-step-block.image-left {
@@ -110,19 +114,32 @@
   .step-subtext {
     margin-left: auto;
     margin-right: auto;
+    font-size: 16px;
   }
   
   .step-visual-container {
-    padding: 30px;
+    padding: 0;
   }
 }
 
 @media (max-width: 640px) {
   .step-heading {
     font-size: 32px;
+    letter-spacing: -1px;
   }
   
   .hiw-steps {
-    padding: 80px 24px;
+    padding: 60px 24px;
+  }
+
+  .step-btn {
+    width: 100%;
   }
 }
+
+@media (max-width: 480px) {
+  .step-heading {
+    font-size: 28px;
+  }
+}
+

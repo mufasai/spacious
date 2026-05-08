@@ -95,7 +95,25 @@
 
 @media (max-width: 768px) {
   .legal-hero {
-    padding: 140px 24px 60px;
+    padding: 120px 24px 60px;
     min-height: auto;
   }
+
+  .legal-heading {
+    font-size: 32px;
+    letter-spacing: -1.5px;
+    margin-bottom: 20px;
+  }
+
+  .legal-description {
+    font-size: 16px;
+    margin-bottom: 32px;
+  }
 }
+
+@media (max-width: 480px) {
+  .legal-heading {
+    font-size: 28px;
+  }
+}
+

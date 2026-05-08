@@ -169,11 +169,20 @@
 }
 
 @media (max-width: 1024px) {
+  .customer-context {
+    padding: 80px 24px;
+  }
+
   .context-top-grid {
     grid-template-columns: 1fr;
     gap: 32px;
+    text-align: center;
   }
   
+  .context-top-subtext {
+    margin: 0 auto;
+  }
+
   .context-main-grid {
     grid-template-columns: 1fr;
     gap: 60px;
@@ -195,5 +204,46 @@
   .context-desc {
     margin-left: 0;
     text-align: center;
+    max-width: 100%;
+  }
+
+  .context-badge {
+    justify-content: center;
+  }
+
+  .context-btn {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
   }
 }
+
+@media (max-width: 768px) {
+  .context-heading {
+    font-size: 32px;
+    letter-spacing: -1px;
+  }
+
+  .context-title {
+    font-size: 18px;
+  }
+
+  .context-desc {
+    font-size: 15px;
+  }
+
+  .context-visual-container {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .context-heading {
+    font-size: 28px;
+  }
+
+  .context-btn {
+    width: 100%;
+  }
+}
+

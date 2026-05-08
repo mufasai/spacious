@@ -9,8 +9,15 @@ const Hero = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [heroLine1, setHeroLine1] = useState('');
   const [heroLine2, setHeroLine2] = useState('');
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
     const line1Text = "Transform your Business";
     const line2Text = "Manages Relationships";
     let isMounted = true;
@@ -28,7 +35,7 @@ const Hero = () => {
 
         for (let j = 0; j <= line2Text.length; j++) {
           if (!isMounted) return;
-          setHeroLine2(line2Text.substring(0, j));
+          setHeroLine2(j === 0 ? "" : line2Text.substring(0, j));
           await new Promise(resolve => setTimeout(resolve, 50));
         }
 
@@ -47,11 +54,15 @@ const Hero = () => {
     window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll();
 
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      isMounted = false;
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', checkMobile);
+    };
   }, []);
 
-  const currentTilt = 20 - (20 * scrollProgress);
-  const currentTranslate = 80 - (80 * scrollProgress);
+  const currentTilt = isMobile ? (10 - (10 * scrollProgress)) : (20 - (20 * scrollProgress));
+  const currentTranslate = isMobile ? (40 - (40 * scrollProgress)) : (80 - (80 * scrollProgress));
 
   return (
     <section className="hero" id="home">
@@ -76,7 +87,7 @@ const Hero = () => {
         </h1>
 
         <p className="hero-subtext">
-          A modern CRM powered by advanced AI to help you automate workflows, understand<br />
+          A modern CRM powered by advanced AI to help you automate workflows, understand
           customers deeply, and scale your business with clarity and speed.
         </p>
 
@@ -99,7 +110,7 @@ const Hero = () => {
       <div 
         className="hero-dashboard"
         style={{
-          transform: `perspective(1200px) rotateX(${currentTilt}deg) translateY(${currentTranslate}px) scale(${0.95 + (0.05 * scrollProgress)})`,
+          transform: `perspective(1200px) rotateX(${currentTilt}deg) translateY(${currentTranslate}px) scale(${isMobile ? (0.98 + (0.02 * scrollProgress)) : (0.95 + (0.05 * scrollProgress))})`,
           opacity: 1 
         }}
       >

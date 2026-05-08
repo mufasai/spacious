@@ -131,3 +131,41 @@
 .hiw-btn-secondary:hover {
   background: rgba(255, 255, 255, 0.1);
 }
+@media (max-width: 768px) {
+  .hiw-hero {
+    padding-top: 120px;
+    padding-bottom: 60px;
+    min-height: auto;
+  }
+
+  .hiw-hero-heading {
+    font-size: 36px;
+    letter-spacing: -1.5px;
+    margin-bottom: 24px;
+  }
+
+  .hiw-hero-subtext {
+    font-size: 16px;
+    margin-bottom: 32px;
+  }
+
+  .hiw-hero-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .hiw-btn-primary,
+  .hiw-btn-secondary {
+    width: 100%;
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hiw-hero-heading {
+    font-size: 32px;
+  }
+}

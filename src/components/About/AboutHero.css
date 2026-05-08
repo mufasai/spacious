@@ -181,15 +181,49 @@
 
 @media (max-width: 768px) {
   .about-hero {
-    padding-top: 120px;
+    padding-top: 100px;
+    min-height: auto;
   }
   
+  .about-hero-content {
+    margin-bottom: 48px;
+  }
+
+  .about-hero-heading {
+    font-size: 36px;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+  }
+
+  .about-hero-subtext {
+    font-size: 15px;
+    margin-bottom: 32px;
+  }
+
+  .about-hero-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .about-btn-primary,
+  .about-btn-secondary {
+    width: 100%;
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+  }
+
   .about-marquee-card {
     width: 280px;
     height: 180px;
-  }
-  
-  .about-hero-heading {
-    letter-spacing: -1.5px;
+    margin: 0 8px;
   }
 }
+
+@media (max-width: 480px) {
+  .about-hero-heading {
+    font-size: 32px;
+  }
+}
+

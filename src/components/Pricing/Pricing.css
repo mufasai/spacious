@@ -237,9 +237,50 @@
 }
 
 @media (max-width: 1024px) {
+  .pricing {
+    padding: 80px 24px;
+  }
+
+  .pricing-header {
+    margin-bottom: 48px;
+  }
+
   .pricing-cards-container {
     grid-template-columns: 1fr;
     max-width: 500px;
     margin: 0 auto;
+    gap: 32px;
   }
 }
+
+@media (max-width: 768px) {
+  .pricing-heading {
+    font-size: 32px;
+    letter-spacing: -1px;
+  }
+
+  .pricing-subtext {
+    font-size: 15px;
+    margin-bottom: 32px;
+  }
+
+  .pricing-card {
+    padding: 32px 24px;
+  }
+
+  .card-price {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pricing-heading {
+    font-size: 28px;
+  }
+
+  .toggle-btn {
+    padding: 8px 20px;
+    font-size: 13px;
+  }
+}
+

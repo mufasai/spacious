@@ -171,9 +171,13 @@
 }
 
 @media (max-width: 1024px) {
+  .blog-detail-content-section {
+    padding: 60px 24px 80px;
+  }
+
   .blog-detail-container {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 60px;
   }
   
   .blog-detail-sidebar {
@@ -185,3 +189,27 @@
     order: 1;
   }
 }
+
+@media (max-width: 768px) {
+  .article-meta {
+    flex-direction: column;
+    gap: 32px;
+    margin-bottom: 40px;
+  }
+
+  .article-section-title {
+    font-size: 20px;
+  }
+
+  .article-body p,
+  .article-body li {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .overview-card {
+    padding: 24px;
+  }
+}
+
