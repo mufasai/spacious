@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './HowItWorksSteps.css';
 
 const steps = [
@@ -27,7 +28,7 @@ const steps = [
 
 const HowItWorksSteps = () => {
   return (
-    <section className="hiw-steps">
+    <section className="hiw-steps" id="steps">
       <div className="hiw-steps-inner">
         {steps.map((step, index) => (
           <div key={index} className={`hiw-step-block ${step.imageLeft ? 'image-left' : 'image-right'}`}>
@@ -38,7 +39,9 @@ const HowItWorksSteps = () => {
               </div>
               <h2 className="step-heading">{step.title}</h2>
               <p className="step-subtext">{step.desc}</p>
-              <button className="step-btn">GET STARTED</button>
+              <Link to="/pricing">
+                <button className="step-btn">GET STARTED</button>
+              </Link>
             </div>
             <div className="step-visual">
               <div className="step-visual-container">

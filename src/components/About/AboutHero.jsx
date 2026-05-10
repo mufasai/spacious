@@ -40,7 +40,12 @@ const AboutHero = () => {
         </p>
 
         <div className="about-hero-actions">
-          <button className="about-btn-primary">SEE MORE</button>
+          <button 
+            className="about-btn-primary"
+            onClick={() => document.getElementById('mission')?.scrollIntoView({ behavior: 'smooth' })}
+          >
+            SEE MORE
+          </button>
           <button 
             className="about-btn-secondary"
             onClick={() => navigate('/contact')}

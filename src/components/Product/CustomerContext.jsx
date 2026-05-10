@@ -33,7 +33,7 @@ const contextFeatures = [
 ];
 
 const CustomerContext = () => {
-  const [activeId, setActiveId] = useState(2); // Set 'Customer Engagement' as default active
+  const [activeId, setActiveId] = useState(2); 
 
   return (
     <section className="customer-context">
@@ -86,7 +86,6 @@ const CustomerContext = () => {
                 <div className="context-divider" />
               </div>
             ))}
-            <button className="context-btn">CUSTOM REPORTS & EXPORTS</button>
           </div>
         </div>
       </div>

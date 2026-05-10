@@ -13,6 +13,7 @@ import ContactPage from './pages/ContactPage';
 import PrivacyPage from './pages/PrivacyPage';
 import TermsPage from './pages/TermsPage';
 import FAQPage from './pages/FAQPage';
+import NotFoundPage from './pages/NotFoundPage';
 import './App.css';
 
 function App() {
@@ -38,6 +39,8 @@ function App() {
         <Route path="/privacy-policy" element={<PrivacyPage />} />
         <Route path="/terms-of-service" element={<TermsPage />} />
         <Route path="/faq" element={<FAQPage />} />
+        <Route path="/404" element={<NotFoundPage />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <Footer />
     </div>

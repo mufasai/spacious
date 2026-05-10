@@ -73,7 +73,6 @@ const Intelligence = () => {
                 <div className="intelligence-divider" />
               </div>
             ))}
-            <button className="intelligence-btn">SEE AI IN ACTION</button>
           </div>
 
           <div className="intelligence-visual">

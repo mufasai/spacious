@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Pricing.css';
 
 const Pricing = () => {
@@ -99,9 +100,11 @@ const Pricing = () => {
                   <span className="card-period">/ Months</span>
                 </div>
 
-                <button className={`card-btn ${isHighlighted ? 'primary' : 'outline'}`}>
-                  GET STARTED
-                </button>
+                <Link to="/pricing" style={{ width: '100%', textDecoration: 'none' }}>
+                  <button className={`card-btn ${isHighlighted ? 'primary' : 'outline'}`}>
+                    GET STARTED
+                  </button>
+                </Link>
 
                 <div className="card-divider"></div>
 

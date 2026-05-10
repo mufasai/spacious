@@ -58,7 +58,7 @@ const AboutMissionVision = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="about-mv">
+    <section className="about-mv" id="mission">
       <div className="about-mv-inner">
         {/* Stats Row */}
         <div className="about-stats">

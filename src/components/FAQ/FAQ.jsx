@@ -33,7 +33,7 @@ const FAQ = () => {
   };
 
   return (
-    <section className="faq" id="faq">
+    <section className="faq" id="faq-content">
       <div className="faq-inner">
         <div className="faq-content">
           <div className="faq-badge">

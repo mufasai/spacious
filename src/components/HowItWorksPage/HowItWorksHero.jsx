@@ -33,7 +33,12 @@ const HowItWorksHero = () => {
         </p>
 
         <div className="hiw-hero-actions">
-          <button className="hiw-btn-primary">SEE THE PROCESS</button>
+          <button 
+            className="hiw-btn-primary"
+            onClick={() => document.getElementById('steps')?.scrollIntoView({ behavior: 'smooth' })}
+          >
+            SEE THE PROCESS
+          </button>
           <button 
             className="hiw-btn-secondary"
             onClick={() => navigate('/contact')}
